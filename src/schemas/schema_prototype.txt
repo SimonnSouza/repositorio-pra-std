@@ -1,0 +1,15 @@
+import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
+import { Document } from 'mongoose';
+
+export type XDocument = Xs & Document
+
+@Schema()
+export class Xs {
+    @Prop({required: true })
+    sample://typeofdata
+}
+
+export const XSchema = SchemaFactory.createForClass(Xs)
+
+
+/*"X" is menat to be replaced with the desired new Schema*/

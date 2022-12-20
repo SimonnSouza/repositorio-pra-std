@@ -1,0 +1,12 @@
+import { Module } from '@nestjs/common';
+import { MongooseModule } from '@nestjs/mongoose';
+import { UseCaseSampleController } from './UseCase-Sample/UseCase-Sample.controller';
+import { UseCaseSampleService } from './UseCase-Sample/UseCase-Sample.service';
+import { Samples, SampleSchema } from 'src/schemas/Sample_schema';
+
+@Module({
+  imports: [MongooseModule.forFeature([{name:Samples.name, schema:SampleSchema}])],
+  controllers: [UseCaseSampleController],
+  providers: [UseCaseSampleService],
+})
+export class SampleModule {}

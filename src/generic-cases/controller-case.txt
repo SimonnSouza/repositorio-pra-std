@@ -1,0 +1,19 @@
+import { Controller, Body, UseCase,  } from "@nestjs/common";
+import { SampleEntity } from "src/entities/Sample_entity";
+
+@Controller('/Samples')
+export class UseCaseSampleController {
+    constructor(private readonly useCaseSampleService : UseCaseSampleService) { }
+
+    @UseCase('/create')
+    async createNewSample (
+        @Body("")recivedBody1
+        @Body("")recivedBody2
+
+        newSample:SampleEntity = {
+            sampleCamp1:recivedBody1
+            sampleCamp2:recivedBody2
+        }
+        const newSampleCreated = this.useCaseSampleService.create(newSample)
+    )
+}

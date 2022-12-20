@@ -1,0 +1,13 @@
+import { Injectable } from '@nestjs/common';
+import { InjectModel } from '@nestjs/mongoose';
+import { Model } from 'mongoose';
+import { SampleEntity } from 'src/entities/Sample_entity';
+import { SampleDocument, Samples } from 'src/schemas/Sample_schema';
+
+
+
+Injectable()
+    export class CaseSampleService {
+        constructor(@InjectModel(Samples.name) private SampleEntity:Model<SampleDocument>) {}
+    }
+

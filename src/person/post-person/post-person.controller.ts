@@ -1,5 +1,5 @@
 import { Controller, Body, Post, } from "@nestjs/common";
-import { PersonEntity } from "src/entities/Person_entity";
+import { PersonEntity } from "src/entities/person_entity";
 import { PostPersonService } from "./post-person.service";
 import { HttpException, HttpStatus } from "@nestjs/common";
 

@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { PersonEntity } from 'src/entities/person_entity';
-import { PersonDocument, Persons } from 'src/schemas/Person_schema';
+import { PersonDocument, Persons } from 'src/schemas/person_schema';
 
 
 

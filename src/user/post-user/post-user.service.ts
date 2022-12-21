@@ -1,9 +1,9 @@
 import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { PersonEntity } from 'src/entities/Person_entity';
+import { PersonEntity } from 'src/entities/person_entity';
 import { UserEntity } from 'src/entities/user_entity';
-import { PersonDocument, Persons } from 'src/schemas/Person_schema';
+import { PersonDocument, Persons } from 'src/schemas/person_schema';
 import { UserDocument, Users } from 'src/schemas/user_schema';
 
 

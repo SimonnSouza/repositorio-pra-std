@@ -12,7 +12,6 @@ Injectable()
 
         async patch(userToPatch:string,newData:UserEntity): Promise<Users> {
             const selectedUser = await this.userEntity.findById(userToPatch)
-
             const id = selectedUser.id
             if(newData.username == '' || null) {
                 selectedUser.password = newData.password

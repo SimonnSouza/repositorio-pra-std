@@ -14,10 +14,12 @@ export class PatchUserController {
 
         patchUser:UserEntity = {
             username:recivedBody1,
-            password:recivedBody2
+            password:recivedBody2,
+            linkedTo:"willStayTheSame"
         }
         
     ) {
+        
         const newUserCreated = await this.patchUserService.patch(recivedId,patchUser)
         return newUserCreated
     }

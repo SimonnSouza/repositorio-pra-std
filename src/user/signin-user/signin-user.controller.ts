@@ -19,7 +19,7 @@ export class SignInUserController {
         }
         const accessToken = generateAcessToken({recivedUsername} )
         const refreshToken = generateRefreshToken({recivedUsername })
-        return {"accessToken":accessToken,"refreshToken":refreshToken}
+        return {"accessToken":accessToken,"refreshToken":refreshToken, "linkedTo":newUserCreated.linkedTo}
     }
 
 }
@@ -36,11 +36,6 @@ function generateRefreshToken(user) {
 }
 function generateAcessToken(user) {
     const token = jwtKey.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: "15m" })
-    console.log("-----accessToken---------")
-    console.log(token)
-    console.log("--------expectedResult-----")
-    console.log(process.env.ACCESS_TOKEN_SECRET)
-    console.log("-----------------------")
     
     return token
 }

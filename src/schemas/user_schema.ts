@@ -9,6 +9,8 @@ export class Users {
     username:string
     @Prop({required: true })
     password:string
+    @Prop({required: true })
+    linkedTo:string
 }
 
 export const UserSchema = SchemaFactory.createForClass(Users)

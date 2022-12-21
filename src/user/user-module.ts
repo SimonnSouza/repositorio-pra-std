@@ -13,10 +13,11 @@ import { DeleteUserService } from './delete-user/delete-user.service';
 import { GetUserService } from './find-one-user/find-one-user.service';
 import { SignInUserController } from './signin-user/signin-user.controller';
 import { SignInUserService } from './signin-user/signin-user.use-case';
+import { Persons, PersonSchema } from 'src/schemas/Person_schema';
 
 
 @Module({
-  imports: [MongooseModule.forFeature([{name:Users.name, schema:UserSchema}])],
+  imports: [MongooseModule.forFeature([{name:Users.name, schema:UserSchema}]),MongooseModule.forFeature([{name:Persons.name, schema:PersonSchema}])],
   controllers: [PostUserController,PatchUserController,GetAllUserController,GetUserController,DeleteUserController,SignInUserController],
   providers: [PostUserService,PatchUserService,GetAllUserService,GetUserService,DeleteUserService,SignInUserService],
 })

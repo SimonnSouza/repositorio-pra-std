@@ -1,5 +1,5 @@
 import { Controller, Body, Patch,  } from "@nestjs/common";
-import { UserEntity } from "src/entities/User_entity";
+import { UserEntity } from "src/entities/user_entity";
 import { PatchUserService } from "./patch-user.service";
 @Controller('/users')
 export class PatchUserController {
@@ -19,7 +19,7 @@ export class PatchUserController {
         }
         
     ) {
-        
+
         const newUserCreated = await this.patchUserService.patch(recivedId,patchUser)
         return newUserCreated
     }

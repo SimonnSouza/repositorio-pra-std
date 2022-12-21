@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { PostPersonController } from './post-person/post-person.controller';
 import { PostPersonService } from './post-person/post-person.service';
-import { Persons, PersonSchema } from 'src/schemas/Person_schema';
+import { Persons, PersonSchema } from 'src/schemas/person_schema';
 import { GetPersonController } from './find-one-person/find-one-person.controller';
 import { GetPersonService } from './find-one-person/find-one-person.service';
 import { GetAllPersonsController } from './find-all-persons/find-all-persons.controller';

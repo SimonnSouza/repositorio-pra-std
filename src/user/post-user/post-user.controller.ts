@@ -2,7 +2,7 @@ import { Controller, Body, Post,  } from "@nestjs/common";
 import { UserEntity } from "src/entities/user_entity";
 import { PostUserService } from "./post-user.service";
 import { HttpException, HttpStatus } from "@nestjs/common";
-import { PersonEntity } from "src/entities/Person_entity";
+import { PersonEntity } from "src/entities/person_entity";
 
 @Controller('/users')
 export class PostUserController {

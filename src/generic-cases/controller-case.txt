@@ -5,15 +5,15 @@ import { SampleEntity } from "src/entities/Sample_entity";
 export class UseCaseSampleController {
     constructor(private readonly useCaseSampleService : UseCaseSampleService) { }
 
-    @UseCase('/create')
-    async createNewSample (
+    @UseCase('/case')
+    async useCaseSample (
         @Body("")recivedBody1
         @Body("")recivedBody2
 
-        newSample:SampleEntity = {
+        newSample:SampleEntity = { 
             sampleCamp1:recivedBody1
             sampleCamp2:recivedBody2
         }
-        const newSampleCreated = this.useCaseSampleService.create(newSample)
+        const newSampleCreated = this.useCaseSampleService.useCase(newSample)
     )
 }

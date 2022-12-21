@@ -12,8 +12,6 @@ Injectable()
 
         async patch(userToPatch:string,newData:UserEntity): Promise<Users> {
             const selectedUser = await this.userEntity.findById(userToPatch)
-            const mantainPassword = selectedUser.password
-            const mantainUsername = selectedUser.username
 
             const id = selectedUser.id
             if(newData.username == '' || null) {
@@ -28,7 +26,7 @@ Injectable()
             selectedUser.username = newData.username
             selectedUser.password = newData.password
             console.log(selectedUser)
-            this.userEntity.findByIdAndUpdate(id,selectedUser).exec()
+            await this.userEntity.findByIdAndUpdate(id,selectedUser).exec()
 
             return selectedUser
         }

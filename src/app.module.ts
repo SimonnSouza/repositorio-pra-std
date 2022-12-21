@@ -1,8 +1,9 @@
 import { Module } from '@nestjs/common';
 import { DatabaseAccess } from './database/mongo-database-access';
 import { UserModule } from './user/user-module';
+import { ConfigModule } from '@nestjs/config';
 @Module({
-  imports: [DatabaseAccess,UserModule],
+  imports: [ConfigModule.forRoot(),DatabaseAccess,UserModule],
   controllers: [],
   providers: [],
 })
